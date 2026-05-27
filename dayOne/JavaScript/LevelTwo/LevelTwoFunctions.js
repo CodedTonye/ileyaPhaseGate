@@ -25,9 +25,55 @@ function getRepeatedValues(numbers) {
     return repeatedValues;
 }
 
-
 let numbers = [1, 2, 3, 2, 4, 3];
 let newArray = getRepeatedValues(numbers);
 
 console.log(numbers);
 console.log(newArray);
+
+console.log();
+
+
+
+function moveAllZeroes(numbers) {
+    let tempArray = new Array(array.length).fill(0);
+    let newIndex = 0;
+        
+    for (let index = 0; index < array.length; index++) {
+        if (array[index] != 0) {
+           tempArray[newIndex] = array[index];
+           newIndex++;
+        }          
+    }
+  
+    return tempArray;
+}
+
+let array = [5, 0, 3, 0, 2, 0];
+let tempArray = moveAllZeroes(array);
+
+console.log(array);
+console.log(tempArray);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
