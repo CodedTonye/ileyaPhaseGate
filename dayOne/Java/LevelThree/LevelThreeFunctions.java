@@ -14,15 +14,7 @@ public class LevelThreeFunctions {
         int[] newArray =  flattenArray(numbers);
         
         System.out.println("Given Array: " + Arrays.deepToString(numbers));        
-        System.out.println("New Array: " + Arrays.toString(newArray)); 
-         
-//        System.out.println(); 
-//        
-//        int[] givenArray = {5, 0, 3, 0, 2, 0};
-//        int[] result =  moveAllZeroes(givenArray);
-//        
-//        System.out.println(Arrays.toString(givenArray));        
-//        System.out.println(Arrays.toString(result)); 
+        System.out.println("New Array: " + Arrays.toString(newArray));  
     
     }
     
@@ -54,27 +46,5 @@ public class LevelThreeFunctions {
     
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

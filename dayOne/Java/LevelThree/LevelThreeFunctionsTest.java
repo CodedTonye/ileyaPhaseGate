@@ -21,13 +21,4 @@ public class LevelThreeFunctionsTest {
 	}
     
     
-//    @Test
-//	public void testThatZeroesAreMovedToTheBack(){
-//		int[] numbers = {5, 0, 3, 0, 2, 0};
-//		
-//		int[] actual = LevelTwoFunctions.moveAllZeroes(numbers);
-//
-//		int[] expected = {5, 3, 2, 0, 0, 0};
-//		assertArrayEquals(expected, actual);
-//	}
-}
+
