@@ -31,4 +31,16 @@ public class LevelThreeFunctionsTest {
 		int[] expected = {0, 8, 1, -9, 3};
 		assertArrayEquals(expected, actual);
 	}
+	
+	
+	@Test
+	public void testThatTwoArraysAreMergedInOneArrayCorrectly(){
+		int[] arrayOne = {3, 5, 1};   
+        int[] arrayTwo = {2, 4, 6};   
+		
+		int[] actual = LevelThreeFunctions.mergeSortedArray(arrayOne, arrayTwo);
+
+		int[] mergedArray = {1, 2, 3, 4, 5, 6};
+		assertArrayEquals(mergedArray, actual);
+	}
 }

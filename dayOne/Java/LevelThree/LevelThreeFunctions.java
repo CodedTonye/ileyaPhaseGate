@@ -27,6 +27,19 @@ public class LevelThreeFunctions {
         System.out.println("k = 2  : " + Arrays.toString(rotateArray(array, 2))); 
         System.out.println("k = 5  : " + Arrays.toString(rotateArray(array, 5))); 
         System.out.println("k = 0  : " + Arrays.toString(rotateArray(array, 1))); 
+        
+        
+        System.out.println();
+        
+        
+        int[] arrayOne = {3, 5, 1};   
+        int[] arrayTwo = {2, 4, 6};   
+        
+        int[] mergedArray = mergeSortedArray(arrayOne, arrayTwo);           
+
+        System.out.println("Array 1: " + Arrays.toString(arrayOne)); 
+        System.out.println("Array 2: " + Arrays.toString(arrayTwo)); 
+        System.out.println("Merged Array: " + Arrays.toString(mergedArray)); 
     
     }
     
@@ -73,6 +86,56 @@ public class LevelThreeFunctions {
                
         return result;
     } 
+
+
+
+
+    public static int[] mergeSortedArray(int[] arrayOne, int[] arrayTwo) {
+    
+        int[] newArray = new int[arrayOne.length + arrayTwo.length];
+              
+        for (int firstArrayIndex = 0; firstArrayIndex < arrayOne.length; firstArrayIndex++) {
+            newArray[firstArrayIndex] = arrayOne[firstArrayIndex]; 
+        }
+        for (int secondArrayIndex = 0; secondArrayIndex < arrayTwo.length; secondArrayIndex++) {
+            newArray[arrayOne.length + secondArrayIndex] = arrayTwo[secondArrayIndex]; 
+        }
+        
+        for (int index = 0; index < newArray.length - 1; index++) {
+            for (int element = 0; element < newArray.length - 1 - index; element++) {
+                
+                if (newArray[element] > newArray[element + 1]) {
+                
+                    int temp = newArray[element];
+                    newArray[element] = newArray[element + 1];
+                    newArray[element + 1] = temp;
+                }
+            }   
+        }         
+        return newArray;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

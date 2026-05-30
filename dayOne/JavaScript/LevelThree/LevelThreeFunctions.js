@@ -43,3 +43,36 @@ console.log("Given Array :", numbers);
 console.log("k = 2    :", rotateArray(array, 2));
 console.log("k = 5    :", rotateArray(array, 5));
 console.log("k = 0    :", rotateArray(array, 0));
+
+
+console.log();
+
+
+function merge(arrayOne, arrayTwo) {
+
+    let result = arrayOne.concat(arrayTwo);
+    
+    for (let index = 0; index < result.length - 1; index++) {
+        for (let element = 0; element < result.length - 1 - index; element++) {
+            if (result[element] > result[element + 1]) {
+                let temp = result[element];
+                result[element] = result[element + 1];
+                result[element + 1] = temp;
+            }
+        }
+    }
+    
+    return result;
+}
+
+
+const arrayOne = [3, 5, 1];
+const arrayTwo = [2, 4, 6];
+
+const result = merge(arrayOne, arrayTwo);
+
+console.log("Array 1:", arrayOne);
+console.log("Array 2:", arrayTwo);
+console.log("Merged :", result);
+
+

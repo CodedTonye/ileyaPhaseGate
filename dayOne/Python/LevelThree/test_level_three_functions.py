@@ -30,3 +30,15 @@ class test_level_three_functions(TestCase):
 		
         self.assertEqual(expected, actual)   
 
+
+
+    def test_that_two_lists_are_merged_in_one_list_correctly(self):
+        list_one = [3, 5, 1];   
+        list_two = [2, 4, 6];
+        
+        actual = level_three_functions.merge(list_one, list_two);
+        
+        expected = [1, 2, 3, 4, 5, 6];
+		
+        self.assertEqual(expected, actual)
+              
