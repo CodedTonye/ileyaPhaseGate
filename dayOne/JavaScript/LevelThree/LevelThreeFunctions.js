@@ -23,3 +23,23 @@ const newArray = flattenArray(numbers);
 
 console.log("Given Array:", numbers)
 console.log("New Array:", newArray)
+
+
+console.log();
+
+
+function rotateArray(numbers, k) {
+    k = k % array.length;                           
+    let result = new Array(array.length).fill(0);   
+    for (let index = 0; index < array.length; index++) {        
+        result[(index + k) % array.length] = array[index];    
+    }
+    return result;                                
+}
+
+
+const array = [1, -9, 3, 0, 8];
+console.log("Given Array :", numbers);
+console.log("k = 2    :", rotateArray(array, 2));
+console.log("k = 5    :", rotateArray(array, 5));
+console.log("k = 0    :", rotateArray(array, 0));

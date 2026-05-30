@@ -21,4 +21,14 @@ public class LevelThreeFunctionsTest {
 	}
     
     
+     @Test
+	public void testThatRotationOfArrayByGivenPositionsIsCorrect(){
+		int[]array = {1, -9, 3, 0, 8};
+		int k = 2;
+		
+		int[] actual = LevelThreeFunctions.rotateArray(array, k);
 
+		int[] expected = {0, 8, 1, -9, 3};
+		assertArrayEquals(expected, actual);
+	}
+}

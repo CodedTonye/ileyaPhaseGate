@@ -15,6 +15,18 @@ public class LevelThreeFunctions {
         
         System.out.println("Given Array: " + Arrays.deepToString(numbers));        
         System.out.println("New Array: " + Arrays.toString(newArray));  
+        
+        
+        System.out.println(); 
+        
+        
+        int[] array = {1, -9, 3, 0, 8};                
+
+        System.out.println("Given Array : " + Arrays.toString(array));
+
+        System.out.println("k = 2  : " + Arrays.toString(rotateArray(array, 2))); 
+        System.out.println("k = 5  : " + Arrays.toString(rotateArray(array, 5))); 
+        System.out.println("k = 0  : " + Arrays.toString(rotateArray(array, 1))); 
     
     }
     
@@ -44,7 +56,23 @@ public class LevelThreeFunctions {
         return newArray;
     }
     
+
+    public static int[] rotateArray(int[] array, int k) {
     
+        int length = array.length;
+        
+        k = k % length;
+        
+        int result[] = new int[length];
+        
+        for (int index = 0; index < length; index++) {
+            int newPosition = (index + k) % length;
+            result[newPosition] = array[index];
+            
+        }
+               
+        return result;
+    } 
 }
 
 
