@@ -24,4 +24,23 @@ public class PasswordCipherTest {
 		String expected = "Caeser";
 		assertEquals(expected, actual);
 	}
+	
+	@Test
+	public void testThatEncriptionOfPasswordIsCorrect() {
+	    String text = "Grace";
+	    
+	    String expected = PasswordCipher.encrypt(text);
+	    
+	    String decrypt = PasswordCipher.decrypt(expected);
+	    
+	    assertEquals(text, decrypt);
+	
+	
+	} 
+	
+	
 }
+
+
+
+
