@@ -17,8 +17,9 @@ public class StudentGradeApp {
         double[] subjectAverages = calculateSubjectAverages(scores, students, subjects);
 
         printGradeReport(scores, students, subjects);
-        printSubjectAverages(subjectAverages);
-        printBestSubject(subjectAverages);
+        printSubjectSummary(scores, students, subjects);
+        //printSubjectAverages(subjectAverages);
+        //printBestSubject(subjectAverages);
     }    
     
 
@@ -104,32 +105,43 @@ public class StudentGradeApp {
         }
         return subjectAverages;
     }
-
     
-    public static void printSubjectAverages(double[] subjectAverages) {
     
-        System.out.println("\n========== SUBJECT AVERAGES ==========");
-        
-        for (int subject = 0; subject < subjectAverages.length; subject++) {
-            System.out.printf("subject %d Avg: %.1f%n", subject + 1, subjectAverages[subject]);
-        }
+    public static void printSubjectSummary(int[][] scores, int students, int subjects) {
+    
+    System.out.println("\nSUBJECT SUMMARY");
+    
+    for (int subject = 0; subject < subjects; subject++) {
+            System.out.printf("Subject " + (subject + 1) + "\n");    
+        }    
+    
     }
 
     
-    public static void printBestSubject(double[] subjectAverages) {
-    
-        int bestSubject = 0;
-        double bestAverage = subjectAverages[0];
-        
-        for (int subject = 1; subject < subjectAverages.length; subject++) {
-        
-            if (subjectAverages[subject] > bestAverage) {
-                bestAverage = subjectAverages[subject];
-                bestSubject = subject;
-            }
-        }
-        System.out.println("\n========== BEST SUBJECT ==========");
-        System.out.printf("Best Subject: Subject %d (Avg %.1f)%n", bestSubject + 1, bestAverage);
-    }
-
+//    public static void printSubjectAverages(double[] subjectAverages) {
+//    
+//        System.out.println("\n========== SUBJECT AVERAGES ==========");
+//        
+//        for (int subject = 0; subject < subjectAverages.length; subject++) {
+//            System.out.printf("subject %d Avg: %.1f%n", subject + 1, subjectAverages[subject]);
+//        }
+//    }
+//
+//    
+//    public static void printBestSubject(double[] subjectAverages) {
+//    
+//        int bestSubject = 0;
+//        double bestAverage = subjectAverages[0];
+//        
+//        for (int subject = 1; subject < subjectAverages.length; subject++) {
+//        
+//            if (subjectAverages[subject] > bestAverage) {
+//                bestAverage = subjectAverages[subject];
+//                bestSubject = subject;
+//            }
+//        }
+//        System.out.println("\n========== BEST SUBJECT ==========");
+//        System.out.printf("Best Subject: Subject %d (Avg %.1f)%n", bestSubject + 1, bestAverage);
+//    }
+//
 }
